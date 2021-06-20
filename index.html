@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio - Clase 04 - Matias Scavarelli</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-menu">    
+            <div class="logo">
+                <img src="" alt="" class="logo__img">ASADEITOR
+            </div>
+            <div class="menu">
+                <ul class="menu__lista">
+                    <li class="menu__li">
+                        <a href="#" class="menu__link menu__link--active">HOME</a>
+                    </li>
+                    <li class="menu__li">
+                        <a href="#" class="menu__link">CALCULA TU ASADO</a>
+                    </li>
+                    <li class="menu__li">
+                        <a href="#" class="menu__link">CONOCENOS</a>
+                    </li>
+                    <li class="menu__li">
+                        <a href="#" class="menu__link">CONTACTANOS</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="portada">
+            <div class="portada__imagen">
+                <img src="imagenes/portada.jpg" alt="portada con imagen de asado" class="portada__img">
+            </div>
+            <div class="portada__contenedor">
+                <h1 class="portada__titulo">ASADEITOR</h1>
+                <p class="portada__texto">Calcula la compra para tu proximo asado en simples pasos y deja que nosotros nos preocupemos por que es lo que se va a comer.</p>
+            </div>
+        </div>
+        <div class="encuesta">
+            <h2 class="subtitulo">CALCULA TU ASADO</h2>
+            <p class="encuesta__texto">A continuacion realizaremos la encuesta que nos permitirá calcular tu Asado:</p>
+             <!--PREGUNTA 1-->
+             <div class="encuesta__pregunta">
+                <p class="encuesta__texto">¿Cuántos comensales serán?</p>
+                <input type="number" name="pregunta1" id="pregunta1">
+            </div>
+            <!--PREGUNTA 2-->
+            <!-- <div class="encuesta__pregunta">
+                <p class="encuesta__texto">¿Que prioridad le dan a las achuras?</p>
+                <input type="range" name="pregunta2" id="pregunta2">
+            </div> -->
+            <!--PREGUNTA 3-->
+            <div class="encuesta__pregunta">
+                <p class="encuesta__texto">¿Qué achuras les gustaría comer?</p>
+                    <div class="encuesta__contenedorCheckbox">
+                        <input class="encuesta__checkbox achuras__checkbox" type="checkbox" name="chori" id="chori">
+                        <label for="chori">Chorizo</label>   
+                    </div> 
+                    <div class="encuesta__contenedorCheckbox">
+                        <input class="encuesta__checkbox achuras__checkbox" type="checkbox" name="choriBombon" id="choriBombon">
+                        <label for="choriBombon">Chorizo bombón</label>   
+                    </div> 
+                    <div class="encuesta__contenedorCheckbox">
+                        <input class="encuesta__checkbox achuras__checkbox" type="checkbox" name="chinchu" id="chinchu">
+                        <label for="chinchu">Chinchulin</label>
+                    </div>
+                    <div class="encuesta__contenedorCheckbox">
+                        <input class="encuesta__checkbox achuras__checkbox" type="checkbox" name="morci" id="morci">
+                        <label for="morci">Morcilla</label>
+                    </div>
+                    <div class="encuesta__contenedorCheckbox">
+                        <input class="encuesta__checkbox achuras__checkbox" type="checkbox" name="riñon" id="riñon">
+                        <label for="riñon">Riñon</label>
+                    </div>
+                    <div class="encuesta__contenedorCheckbox">
+                        <input class="encuesta__checkbox achuras__checkbox" type="checkbox" name="molleja" id="molleja">
+                        <label for="molleja">Molleja</label>
+                    </div>
+                    <!-- <div class="encuesta__contenedorCheckbox">
+                        <input class="encuesta__checkbox achuras__checkbox" type="checkbox" name="otro" id="otro">
+                        <label for="otro"><input type="text" class="encuesta__inputText" value="" placeholder="Ingrese otra achura"></label>
+                    </div> -->
+            </div>
+            <!--PREGUNTA 4-->
+            <!-- <div class="encuesta__pregunta">
+                <p class="encuesta__texto">¿Que prioridad le dan a al asado?</p>
+                <input type="range" name="pregunta4" id="pregunta4">
+            </div> -->
+            <!--PREGUNTA 5-->
+            <div class="encuesta__pregunta">
+                <p class="encuesta__texto">¿Qué tipo de corte les gustaría comer?</p>
+                    <div class="encuesta__contenedorCheckbox">
+                        <input class="encuesta__checkbox asado__checkbox" type="checkbox" name="vacio" id="vacio">
+                        <label for="vacio">Vacio</label>   
+                    </div> 
+                    <div class="encuesta__contenedorCheckbox">
+                        <input class="encuesta__checkbox asado__checkbox" type="checkbox" name="tiraAsado" id="tiraAsado">
+                        <label for="tiraAsado">Tira de asado</label>
+                    </div> 
+                    <div class="encuesta__contenedorCheckbox">
+                        <input class="encuesta__checkbox asado__checkbox" type="checkbox" name="tapaAsado" id="tapaAsado">
+                        <label for="tapaAsado">Tapa de asado</label>
+                    </div>
+                    <div class="encuesta__contenedorCheckbox">
+                        <input class="encuesta__checkbox asado__checkbox" type="checkbox" name="bondiola" id="bondiola">
+                        <label for="bondiola">Bondiola</label>
+                    </div>
+                    <div class="encuesta__contenedorCheckbox">
+                        <input class="encuesta__checkbox asado__checkbox" type="checkbox" name="bifeDeChorizo" id="bifeDeChorizo">
+                        <label for="bifeDeChorizo">Bife de chorizo</label>
+                    </div>
+                    <div class="encuesta__contenedorCheckbox">
+                        <input class="encuesta__checkbox asado__checkbox" type="checkbox" name="matambre" id="matambre">
+                        <label for="matambre">Matambre</label>
+                    </div>
+                    <div class="encuesta__contenedorCheckbox">
+                        <input class="encuesta__checkbox asado__checkbox" type="checkbox" name="entraña" id="entraña">
+                        <label for="entraña">Entraña</label>
+                    </div>
+                    <!-- <div class="encuesta__contenedorCheckbox">
+                        <input class="encuesta__checkbox asado__checkbox" type="checkbox" name="otro" id="otro2">
+                        <label for="otro2"><input type="text" class="encuesta__inputText" value="" placeholder="Ingrese otro tipo de corte"></label>
+                    </div> -->
+            </div>
+            <!--PREGUNTA 6-->
+            <div class="encuesta__pregunta">
+                <p class="encuesta__texto">¿Desea agregar algun extra?</p>
+                <div class="encuesta__contenedorCheckbox">
+                    <input class="encuesta__checkbox extra__checkbox" type="checkbox" name="provoleta" id="provoleta">
+                    <label for="provoleta">Provoleta</label>
+                </div>
+                <div class="encuesta__contenedorCheckbox">
+                    <input class="encuesta__checkbox extra__checkbox" type="checkbox" name="chimiChurri" id="chimiChurri">
+                    <label for="chimiChurri">Chimi Churri</label>
+                </div>
+                <div class="encuesta__contenedorCheckbox">
+                    <input class="encuesta__checkbox extra__checkbox" type="checkbox" name="criolla" id="criolla">
+                    <label for="criolla">Salsa criolla</label>
+                </div>
+                <!-- <div class="encuesta__contenedorCheckbox">
+                    <input class="encuesta__checkbox" type="checkbox" name="otro" id="otro3">
+                    <label for="otro3"><input type="text" class="encuesta__inputText" name="otro" placeholder="Ingrese ingrediente extra"></label>
+                </div> -->
+            </div>
+            <!--PREGUNTA 7-->
+            <div class="encuesta__pregunta">
+                <p class="encuesta__texto">¿con qué van a hacer el fuego?</p>
+                <div class="encuesta__contenedorRadio">
+                    <div class="encuesta__cuadroRadio">
+                        <input class="encuesta__radio combustible__radio" type="radio" name="combustible" id="carbon" checked>
+                        <label for="carbon">Carbon</label>
+                    </div>
+                    <div class="encuesta__cuadroRadio">
+                        <input class="encuesta__radio combustible__radio" type="radio" name="combustible" id="leña">
+                        <label for="leña">Leña</label>
+                    </div>
+                    <div class="encuesta__cuadroRadio">
+                        <input class="encuesta__radio combustible__radio" type="radio" name="combustible" id="otro5">
+                        <label for="otro5">Otro</label>
+                    </div>
+                </div>
+            </div>
+            <!--PREGUNTA 8-->
+            <div class="encuesta__pregunta encuesta__pregunta-final">
+                <p class="encuesta__texto">Hacer calculo:</p>
+                <input type="submit" onclick="chequeo()" class="encuesta__btnEnviar" name="enviar" id="enviar">
+            </div>
+        </div>
+
+        <!--CALCULO-->
+        <div class="calculo">
+        </div>
+        
+    </main>
+    <footer>
+        <div class="footer">
+            <ul class="footer__redes">
+                <li class="footer__li">
+                    <a href="#" class="footer__link">
+                        <span class="footer__span"></span>
+                        Instagram
+                    </a>
+                </li>
+                <li class="footer__li">
+                    <a href="#" class="footer__link"> 
+                        <span class="footer__span"></span>
+                        Facebook
+                    </a>
+                </li>
+                <li class="footer__li">
+                    <a  href="#" class="footer__link">
+                        <span class="footer__span"></span>
+                        Twiter
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script> 
+</body>
+</html>
