@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafio - Clase 10 - Matias Scavarelli</title>
+    <title>Asadeitor - Contactanos</title>
     <link rel="stylesheet" href="css/estilos.css">
-    <link rel="stylesheet" href="iconos/iconos.css">    
 </head>
-<body id="index">
+<body>
     <nav>
         <div class="nav-menu">    
             <div class="logo">
@@ -17,7 +16,7 @@
             <div class="menu">
                 <ul class="menu__lista">
                     <li class="menu__li">
-                        <a href="#" class="menu__link menu__link--active">HOME</a>
+                        <a href="index.html" class="menu__link">HOME</a>
                     </li>
                     <li class="menu__li">
                         <a href="calculaAsado.html" class="menu__link">CALCULA TU ASADO</a>
@@ -26,42 +25,35 @@
                         <a href="#" class="menu__link">CONOCENOS</a>
                     </li> -->
                     <li class="menu__li">
-                        <a href="contacto.html" class="menu__link">CONTACTANOS</a>
+                        <a href="#" class="menu__link menu__link--active">CONTACTANOS</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <main id="index">
-        <div class="portada">
-            <div class="portada__imagen">
-                <img src="imagenes/portada.jpg" alt="portada con imagen de asado" class="portada__img">
+    <main>
+        <div class="contacto">
+            <h2 class="subtitulo">Contactate con nosotros</h2>
+            <div class="contacto__contenedor">
+                <p class="contacto__pregunta">Nombre y Apellido:</p>
+                <input type="text" id="nombre" onfocusout="completar('nombre',0)" class="contacto__inputText" placeholder="Cosme Fulnito">
+                <p class="textoError"></p>
             </div>
-            <div class="portada__contenedor">
-                <h1 class="portada__titulo">ASADEITOR</h1>
-                <p class="portada__texto">Calcula la compra para tu proximo asado en simples pasos y deja que nosotros nos preocupemos por que es lo que se va a comer.</p>
+            <div class="contacto__contenedor">
+                <p class="contacto__pregunta">Mail:</p>
+                <input type="email" id="mail" onfocusout="verificar()" class="contacto__inputText" placeholder="cosmefulanito@icq.com">
+                <p class="textoError"></p>
             </div>
-        </div>
-        <div class="contenedor">
-            <h2 class="subtitulo">
-                PASO 1
-            </h2>
-            <p>
-                Dirigite a la sección "Calcula tu asado" completa el formulario y recibi el presupuesto de tu proximo asado.
-            </p>
-            <a href="calculaAsado.html" class="btnLink">Calcula tu asados<span class="contacto__span icon-arrow-right2"></span></a>
-            <h2 class="subtitulo">
-                PASO 2
-            </h2>
-            <p>
-                Compartí con tus amigos el presupuesto por cabeza y realiza la compra.
-            </p>
-            <h2 class="subtitulo">
-                PASO 3
-            </h2>
-            <p>
-                Prende el fueguito y disfruta de la compañia y un buen asado.
-            </p>
+            <div class="contacto__contenedor">
+                <p class="contacto__pregunta">Mensaje:</p>
+                <textarea id="mensaje" onfocusout="completar('mensaje',2)" cols="30" rows="10" class="contacto__inputRichText" placeholder="soy vegano y no tengo opciones veganas"></textarea>
+                <p class="textoError"></p>
+            </div>
+            <div class="contacto__contenedorBtn">
+               <a href="#" class="contacto__btn" onclick="enviar()" id="enviar">Enviar</a>
+               <a href="#" class="contacto__btn" onclick="borrar()" id="borrar">Borrar</a>
+               <p class="textoError"></p> 
+            </div>
         </div>
     </main>
     <footer>
@@ -88,6 +80,6 @@
             </ul>
         </div>
     </footer>
-    
+    <script src="js/contacto.js"></script>
 </body>
 </html>

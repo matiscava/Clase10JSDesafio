@@ -1,114 +1,167 @@
+//ARRAY CARNES//
 
-
-//FUNCIONES
-
-function numeroComensales(numero){
-    numero=parseInt(prompt("Ingrese la cantidad de comensales:"));
-    while(isNaN(numero)){
-        if (isNaN(numero)){
-            numero=parseInt(prompt ("Ingresa nuevamente el número de comensales"));
-        } else {
-            break;
-        };
-    };
-    return numero;
-};
-
-function cortes(numero,corte,nombre){
-    numero=parseInt(prompt ("Ingresa cuantas porciones de "+corte+" va a comer "+nombre));
-    while(isNaN(numero)){
-            numero=parseInt(prompt ("Ingresa las porciones en numeros:"));
-    };
-    return numero;
-};
-//CLASE-OBJETO//
-class Comensal{
-    constructor(nombre,vacio,bondiola,chorizo,morcilla){
-        this.nombre=nombre.toLowerCase();
-        this.vacio=vacio;
-        this.bondiola=bondiola;
-        this.chorizo=chorizo;
-        this.morcilla=morcilla;
+let asadoAchuras = [
+    {
+        corte: "Chorizo",
+        porcion: 0.15,
+        unidad: "g",
+        valor: 75,
+        id:"chori"
+    },
+    {
+        corte: "Chorizo bombon",
+        porcion: 0.15,
+        unidad: "g",
+        valor: 75,
+        id:"choriBombon"
+    },
+    {
+        corte: "Chinchulin",
+        porcion: 0.2,
+        unidad: "g",
+        valor: 60,
+        id:"chinchu"
+    },
+    {
+        corte: "Morcilla",
+        porcion: 0.125,
+        unidad: "g",
+        valor: 56,
+        id:"morci"
+    },
+    {
+        corte: "Riñon",
+        porcion: 0.2,
+        unidad: "g",
+        valor: 58,
+        id:"riñon"
+    },
+    {
+        corte: "Molleja",
+        porcion: 0.2,
+        unidad: "g",
+        valor: 258,
+        id:"molleja"
     }
-    vegetariano(){
-        if(this.vacio==0 && this.bondiola == 0 && this.chorizo==0 && this.morcilla==0 ){
-            console.log(this.nombre+", ¿Es vegetarian@?");
-        }else{
-            console.log(this.nombre+", es mas carnivor@ que un T-Rex.");
-        }
+]
+
+let asadoCortes = [
+    {
+        corte: "Vacio",
+        porcion: 0.4,
+        unidad: "g",
+        valor: 380,
+        id:"vacio"
+    },
+    {
+        corte: "Tira de asado",
+        porcion: 0.5,
+        unidad: "g",
+        valor: 448,
+        id:"tiraAsado"
+    },
+    {
+        corte: "Tapa de asado",
+        porcion: 0.5,
+        unidad: "g",
+        valor: 448,
+        id:"tapaAsado"
+    },
+    {
+        corte: "Bondiola",
+        porcion: 0.4,
+        unidad: "g",
+        valor: 278,
+        id:"bondiola"
+    },
+    {
+        corte: "Bife de chorizo",
+        porcion: 0.4,
+        unidad: "g",
+        valor: 556,
+        id:"bideDeChorizo"
+    },
+    {
+        corte: "Matambre",
+        porcion: 0.4,
+        unidad: "g",
+        valor: 448,
+        id:"matambre"
+    },
+    {
+        corte: "Entraña",
+        porcion: 0.4,
+        unidad: "g",
+        valor: 596,
+        id:"entraña"
     }
-    queCome(){
-        alert(this.nombre+" va a comer:\n"+this.vacio+" porciones de Vacio;\n"+this.bondiola+" porciones de bondiola;\n"+this.chorizo+" porciones de chorizo;\n"+this.morcilla+" porciones de morcilla;\n");
+];
+
+let extraCortes = [
+    {
+        corte: "Provoleta",
+        porcion: 0.250,
+        unidad: "g",
+        valor: 120,
+        proporcion:0.125,
+        id:"provoleta"   
+    },
+    {
+        corte: "Chimi churri",
+        porcion: 1,
+        unidad: "u.",
+        valor: 375,
+        proporcion: 0.25,
+        id:"chimiChurri"   
+    },
+    {
+        corte: "Salsa criolla",
+        porcion: 1,
+        unidad: "u.",
+        valor: 160,
+        proporcion:0.25,
+        id:"criolla"   
+    }    
+];
+let combustibleAsado= [
+    {
+        material:"Carbón",
+        porcion: 4,
+        unidad:"bolsas",
+        valor: 260,
+        proporcion: 2,
+        id:"carbon"
+        
+    },
+    {
+        material:"Leña",
+        porcion: 1,
+        unidad:"atados",
+        valor: 230,
+        proporcion:1.5,
+        id:"leña"
+    },
+    {
+        id:"otro"
+    }
+]
+//CLASES CONSTRUCTORAS//
+class CorteCarne{
+    constructor(corte,porcion,unidad,valor,id){
+        this.corte=corte;
+        this.porcion=porcion;
+        this.unidad=unidad;
+        this.valor=valor;
+        this.id=id;
     }
 }
-let asado = [];
-let comensales;
-
-comensales=numeroComensales(comensales);
-
-//LLENADO DE ARRAY//
-for(i=0;i<comensales;i++){
-    let persona = new Comensal(
-        this.nombre=prompt("Ingrese el nombre del comensal:"),
-        cortes(this.vacio,"Vacio",this.nombre),
-        cortes(this.bondiola,"Bondiola",this.nombre),
-        cortes(this.chorizo,"Chorizo",this.nombre),
-        cortes(this.morcilla,"Morcilla",this.nombre) 
-    );
-    persona.queCome();
-    asado.push(persona);
+class ExtraContruct{
+    constructor(corte,porcion,unidad,valor,proporcion,id){
+        this.corte=corte;
+        this.porcion=porcion;
+        this.unidad=unidad;
+        this.valor=valor;
+        this.proporcion=proporcion;
+        this.id=id;
+    }
 }
-
-// const chorizos = asado.filter(chori=>chori.chorizo != 0);
-//calcular choris//
-let chori=0, vacio=0,mondio=0,morci=0;
-let choriPrecio, vacioPrecio,mondioPrecio,morciPrecio,precioFinal;
-
-//calcular vacio//
-for(i=0;i<asado.length;i++){
-    vacio=asado[i].vacio+vacio;
-    // console.log(asado[i].nombre+" va a comer "+asado[i].vacio+" pedazos de vacio");
-}
-
-
-//calcular mondiola//
-for(i=0;i<asado.length;i++){
-    mondio=asado[i].bondiola+mondio;
-    // console.log(asado[i].nombre+" va a comer "+asado[i].bondiola+" pedazos de bondiola");
-}
-
-
-//calcular choris//
-for(i=0;i<asado.length;i++){
-    chori=asado[i].chorizo+chori;
-    // console.log(asado[i].nombre+" va a comer "+asado[i].chorizo+" pedazos de chori");
-}
-
-//calcular morcis//
-for(i=0;i<asado.length;i++){
-    morci=asado[i].morcilla+morci;
-    // console.log(asado[i].nombre+" va a comer "+asado[i].morcilla+" pedazos de morci");
-}
-
-console.log("se van a comer "+vacio+" porciones de vacio\nEn total van a tener que comprar "+parseFloat(vacio*0.5).toFixed(3)+"kilos");
-console.log("se van a comer "+mondio+" porciones de bondio\nEn total van a tener que comprar "+parseFloat(mondio*0.5).toFixed(3)+"kilos");
-console.log("se van a comer "+chori+" porciones de chori\nEn total van a tener que comprar "+parseFloat(chori*0.125).toFixed(3)+"kilos");
-console.log("se van a comer "+morci+" porciones de morci\nEn total van a tener que comprar "+parseFloat(morci*0.15).toFixed(3)+"kilos");
-
-vacioPrecio=(parseFloat(vacio*0.5)*950).toFixed(2);
-mondioPrecio=(parseFloat(mondio*0.5)*440).toFixed(2);
-choriPrecio=(parseFloat(chori*0.125)*350).toFixed(2);
-morciPrecio=(parseFloat(morci*0.15)*320).toFixed(2);
-precioFinal=parseFloat(vacioPrecio+mondioPrecio+choriPrecio+morciPrecio).toFixed(2);
-
-
-alert("El asado va a ser para: "+asado.length+" personas\n\nVan a tener que comprar:\n"+
-parseFloat(vacio*0.5).toFixed(3)+" kilos de Vacio x $"+vacioPrecio+"\n"+
-parseFloat(mondio*0.5).toFixed(3)+"kilos de Bondiola x $"+morciPrecio+"\n"+
-parseFloat(chori*0.125).toFixed(3)+"kilos de Chori x $"+choriPrecio+"\n"+
-parseFloat(morci*0.125).toFixed(3)+"kilos de Morcilla x $"+morciPrecio+"\n"+
-"En total van a gastar $"+precioFinal+"\n\n"+
-"Son $"+(precioFinal/asado.length).toFixed(2)+" por cabeza.");
-
-
-

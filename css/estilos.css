@@ -3,6 +3,9 @@ body {
   padding: 0;
   box-sizing: border-box; }
 
+body#index {
+  min-height: 100%; }
+
 .nav-menu {
   display: flex;
   flex-direction: row;
@@ -35,7 +38,22 @@ body {
     color: blueviolet; }
 
 main {
-  min-height: 67vh; }
+  box-sizing: border-box;
+  min-height: 69.8vh;
+  overflow: auto;
+  padding: 20px; }
+  main#index {
+    padding: 0;
+    background: #22c1c3;
+    background: linear-gradient(90deg, #22c1c3 50%, #fdbb2d 50%); }
+  main#mainEncuesta {
+    background-image: url(../imagenes/encuestaImg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 20px;
+    padding-top: 20px; }
 
 .footer {
   background-color: aquamarine;
@@ -90,11 +108,27 @@ main {
     font-family: sans-serif;
     font-size: 20px; }
 
+.btnLink {
+  text-decoration: none;
+  padding: 5px 12px;
+  border: 2px solid;
+  color: black;
+  transition: 0.5s;
+  background: #a19999;
+  border-color: #6c6ea7;
+  border-radius: 20px; }
+  .btnLink:hover {
+    background: #b9c8ab;
+    color: #df0c28; }
+
 .encuesta {
   padding: 2%;
   max-width: max-content;
-  margin-left: auto;
-  margin-right: auto; }
+  margin: 20px auto;
+  background-color: rgba(255, 255, 255, 0.52);
+  border: 2px solid whitesmoke;
+  border-radius: 10px;
+  box-shadow: inset 0 0 16px 6px white; }
   .encuesta__contenedorCheckbox {
     display: flex;
     flex-direction: row;
@@ -104,12 +138,12 @@ main {
     padding: 14px;
     border: 3px gray solid;
     border-radius: 13px;
-    background-color: #f0f8ffd6;
+    background-color: #f0f8ff;
     max-width: 500px;
     margin: 10px 0; }
-    .encuesta__pregunta-final {
-      display: flex;
-      align-items: center; }
+    .encuesta__pregunta--addItem {
+      position: relative;
+      transition: 1s; }
   .encuesta__checkbox, .encuesta__radio {
     margin-right: 9px; }
   .encuesta__contenedorRadio {
@@ -131,6 +165,42 @@ main {
     .encuesta__inputText:focus {
       outline: 2px auto #DAAE36;
       background: #f6ffcf; }
+  .encuesta__contenedorBtn {
+    margin-top: 8px;
+    padding: 8px; }
+  .encuesta__btnAddItem {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    background-color: burlywood;
+    border: 1px solid #f1a847;
+    border-radius: 5px;
+    margin-top: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    transition: 0.5s; }
+    .encuesta__btnAddItem:hover {
+      color: gray;
+      background-color: darkkhaki; }
+
+.botonFinal {
+  display: flex;
+  align-items: center; }
+
+.addItem {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.424);
+  left: 0;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+  overflow: auto; }
 
 .calculo {
   margin-left: auto;
@@ -156,7 +226,64 @@ main {
     font-family: fantasy;
     color: #111010; }
 
+.contacto {
+  width: fit-content;
+  padding: 25px;
+  border: 3px solid #1650ff;
+  border-radius: 40px 0;
+  margin: 0 auto;
+  box-shadow: inset 0 0 15px #1650ff; }
+  .contacto__inputText {
+    box-sizing: border-box;
+    padding: 5px;
+    width: 100%;
+    font-size: 15px; }
+  .contacto__inputRichText {
+    box-sizing: border-box;
+    padding: 5px;
+    width: 100%;
+    font-size: 15px;
+    height: 60px; }
+  .contacto__contenedorBtn {
+    box-sizing: border-box;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 10px;
+    min-height: max-content; }
+  .contacto__btn {
+    text-decoration: none;
+    padding: 5px 12px;
+    border: 2px solid;
+    color: black;
+    transition: 0.5s; }
+    .contacto__btn#borrar {
+      background: #c72828;
+      border-color: #d55555; }
+      .contacto__btn#borrar:hover {
+        color: white;
+        background: #c77272; }
+    .contacto__btn#enviar {
+      background: #a19999;
+      border-color: #6c6ea7; }
+      .contacto__btn#enviar:hover {
+        text-decoration: underline;
+        background: #b9c8ab; }
+  .contacto__span {
+    margin-left: 5px; }
+
+.textoError {
+  color: red;
+  font-size: 11px;
+  display: none; }
+
 .subtitulo {
   font-size: 30px;
   font-family: serif;
-  color: #e4b73b; }
+  color: #2c2693; }
+
+.contenedor {
+  background: #ced1d3;
+  padding: 10px;
+  margin: 0 auto;
+  width: fit-content;
+  box-shadow: 0 0 8px 6px #3e413c; }
